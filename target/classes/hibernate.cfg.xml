@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+                                         "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+ <session-factory >
+  <property name="hibernate.connection.driver_class">oracle.jdbc.driver.OracleDriver</property>
+  <property name="hibernate.connection.password">admin</property>
+  <property name="hibernate.connection.url">jdbc:oracle:thin:@localhost:1521:xe</property>
+  <property name="hibernate.connection.username">system</property>
+  <property name="hibernate.dialect">org.hibernate.dialect.Oracle10gDialect</property>
+  <property name="hibernate.hbm2ddl.auto">create</property> 
+  <property name="hibernate.show_sql">true</property>
+  <property name="hibernate.connection.autocommit">true</property>
+  <property name="hibernate.order_inserts">true</property>
+  <property name="hibernate.transaction.auto_close_session">true</property>
+  <mapping class="it.synclab.stage.cogeweb.entities.Skills"/>
+  <mapping class="it.synclab.stage.cogeweb.entities.Employee"/>
+  <mapping class="it.synclab.stage.cogeweb.entities.Commessa"/>
+  <mapping class="it.synclab.stage.cogeweb.entities.Company"/>
+  <mapping class="it.synclab.stage.cogeweb.entities.Department"/>
+  <mapping class="it.synclab.stage.cogeweb.entities.SkillEmployee"/>
+  <mapping class="it.synclab.stage.cogeweb.entities.StoryEmployeeCommessa"/>
+ </session-factory>
+</hibernate-configuration>

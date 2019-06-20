@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence:persistence version="2.1" xmlns:persistence="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd ">
+  <persistence:persistence-unit  transaction-type="RESOURCE_LOCAL">
+  <persistence:provider>org.hibernate.jpa.HibernatePersistenceProvider</persistence:provider>
+  <persistence:class>it.synclab.stage.cogeweb.entities.Commessa</persistence:class>
+  <persistence:class>it.synclab.stage.cogeweb.entities.Employee</persistence:class>
+  <persistence:class>it.synclab.stage.cogeweb.entities.Skills</persistence:class>
+  <persistence:class>it.synclab.stage.cogeweb.entities.Company</persistence:class>
+  <persistence:class>it.synclab.stage.cogeweb.entities.Department</persistence:class>
+  <persistence:class>it.synclab.stage.cogeweb.entities.SkillEmployee</persistence:class>
+  <persistence:class>it.synclab.stage.cogeweb.entities.StoryEmployeeCommessa</persistence:class>
+  <persistence:properties>
+   <persistence:property name="hibernate.connection.driver_class" value="oracle.jdbc.driver.OracleDriver"></persistence:property>
+  <persistence:property name="hibernate.connection.url" value="jdbc:oracle:thin:@//127.0.0.1:1521/xe"></persistence:property>
+  <persistence:property name="hibernate.connection.username" value="system"></persistence:property>
+  <persistence:property name="hibernate.connection.password" value="admin"></persistence:property>
+  <persistence:property name="hibernate.dialect" value="org.hibernate.dialect.Oracle10gDialect"></persistence:property>		
+  <persistence:property name="hbm2ddl.auto" value="update"></persistence:property>
+  <persistence:property name="hibernate.default_schema" value="xe"></persistence:property>
+  <persistence:property name="show_sql" value="true"></persistence:property>  
+  </persistence:properties>
+  </persistence:persistence-unit>
+</persistence:persistence>
